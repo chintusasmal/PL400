@@ -40,7 +40,7 @@ namespace ContosoPackageProject
 
             localPluginContext.Trace("Calling RetrieveMultiple for locked permits");
 
-            //If error in this line , chnage the CurrentUserService to PluginUserService
+            //If error in this line , chnage the CurrentUserService to PluginUserService or initiateUserService
             var response = localPluginContext.PluginUserService.RetrieveMultiple(new FetchExpression(fetchString));
 
             int lockedPermitCount = (int)((AliasedValue)response.Entities[0]["Count"]).Value;
